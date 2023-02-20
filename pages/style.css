@@ -1,0 +1,332 @@
+html {
+    background-color: #7A6965;
+    font-family: sans-serif;
+}
+
+body {
+    min-width: 360px;
+}
+
+header,
+main,
+footer {
+    background-color: white;
+}
+
+header,
+main,
+footer,
+nav {
+    margin: 1rem;
+}
+
+header,
+footer {
+    background-color: #504947;
+    padding: 1rem;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    background-color: antiquewhite;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #2c3e50;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #d35400;
+    color: #ecf0f1;
+}
+
+nav ul li a.active {
+    background-color: #95a5a6;
+    color: #ecf0f1;
+}
+
+main {
+    padding: 1.5rem;
+}
+
+footer {
+    text-align: center;
+}
+
+main h2 {
+    border-bottom: 2px solid #1c344d;
+    margin-bottom: 2rem;
+}
+
+.table-list {
+    border-collapse: collapse;
+    color: #2c3e50;
+    width: 100%;
+}
+
+.table-list,
+.table-list th,
+.table-list td {
+    border: 2px solid #bdc3c7;
+}
+
+.table-list th,
+.table-list td {
+    padding: 1rem;
+}
+
+.table-list th,
+.table-list tbody tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+.list-actions {
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-actions li {
+    display: inline-block;
+}
+
+.list-actions-button-details,
+.list-actions-button-edit,
+.list-actions-button-delete {
+    border: none;
+    border-radius: 5px;
+    color: wheat;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.list-actions-button-details,
+.list-actions-button-edit,
+.list-actions-button-delete {
+    display: inline-block;
+    width: 50px;
+    padding: 0.2rem 0.4rem;
+}
+
+.list-actions-button-details,
+.list-actions-button-edit {
+    margin-right: 1rem;
+}
+
+.list-actions-button-details {
+    background-color: #2980b9;
+}
+
+.list-actions-button-details:hover {
+    background-color: #3ab0ff;
+}
+
+.list-actions-button-edit {
+    background-color: #29b935;
+}
+
+.list-actions-button-edit:hover {
+    background-color: #3aff75;
+}
+
+.form-button-cancel,
+.list-actions-button-delete {
+    background-color: #b92929;
+}
+
+.form-button-cancel:hover,
+.list-actions-button-delete:hover {
+    background-color: #ff3a3a;
+}
+
+.list-actions-button-delete,
+.list-actions-button-details,
+.list-actions-button-edit,
+.button-add,
+.form-button-submit,
+.form-button-cancel {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.button-add,
+.form-button-submit,
+.form-button-cancel {
+    padding: 0.2rem 0.4rem;
+}
+
+.button-add,
+.form-button-submit {
+    background-color: #b9af29;
+}
+
+.button-add:hover,
+.form-button-submit:hover {
+    background-color: #fff23a;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 200px 300px 1fr;
+    gap: 1rem;
+}
+
+.form select,
+.form input[type="text"],
+.form input[type="block"],
+.form input[type="date"] {
+    border: 1px solid black;
+    color: rgb(3, 0, 0);
+    border-radius: 2px;
+    padding: 0.4rem;
+    width: 100%;
+}
+
+.form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.symbol-required {
+    color: #c0392b;
+}
+
+.form-buttons {
+    grid-column: 1;
+}
+
+.form-button-submit,
+.form-button-cancel {
+    width: 100%;
+}
+
+.form-button-cancel {
+    box-sizing: border-box;
+    display: block;
+}
+
+.form-button-submit {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.form input.error-input,
+.form select.errors-input {
+    border: 3px solid #f82d16;
+}
+
+.errors-text {
+    display: block;
+    font-size: 0.8em;
+    line-height: 2.25rem;
+    margin-top: 0.5em;
+}
+
+.errors-text,
+.symbol-required {
+    color: #b92929;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 720px) {
+    header {
+        flex-direction: column;
+    }
+    
+    header h1 {
+        text-align: center;
+    }
+
+    header img {
+        align-self: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        flex-basis: 50%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+
+    .form-buttons {
+        grid-column: 1 / 1;
+    }
+
+
+}
+
+@media all and (max-width: 400px) {
+    body,
+    nav,
+    nav ul,
+    header,
+    main,
+    footer {
+        margin: 0;
+    }
+
+    nav ul li {
+        flex-basis: 100%;
+    }
+
+    
+}

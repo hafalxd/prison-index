@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Prison Index</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="application/javascript" src="/js/validationCommon.js"></script>
+    <script type="application/javascript" src="/js/validationNewForm.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Prison Index</h1>
+        <img src="/images/kitty.jpg" width="100" height="100" alt="kocie zdjęcie">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Mainpage</a></li>
+            <li><a href="list.html" class="active">Prisoners List</a></li>
+            <li><a href="logistics.html">Logistics</a></li>
+            <li><a href="return.html">Return to Society</a></li>
+            <li><a href="links.html">Useful links</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Add Inmate</h2>
+        <form class="form" novalidate onsubmit="return validateForm();">
+
+            <label for="firstName">Name: <span class="symbol-required">*</span></label>
+            <input type="text" name="firstName" id="firstName" class="error-input" required>
+            <span id="errorFirstName" class="errors-text"></span>
+
+            <label for="secondName">Surname: <span class="symbol-required">*</span></label>
+            <input type="text" name="secondName" id="secondName" class="error-input" required>
+            <span id="errorSecondName" class="errors-text"></span>
+
+            <label for="startDate">Start of sentence: <span class="symbol-required">*</span></label>
+            <input type="date" name="startDate" id="startDate" min="2001-01-01" max="2050-01-01" class="error-input"
+                required>
+            <span id="errorStartDate" class="errors-text"></span>
+
+            <label for="endDate">End of sentence: <span class="symbol-required">*</span></label>
+            <input type="date" name="endDate" id="endDate" min="2001-01-01" max="2050-01-01" class="error-input"
+                required>
+            <span id="errorEndDate" class="errors-text"></span>
+
+            <label for="block">Block: <span class="symbol-required">*</span></label>
+            <input type="block" name="block" id="block" class="error-input" required>
+            <span id="errorBlock" class="errors-text"></span>
+
+
+            <div>
+                <p id="errorsSummary" class="errors-text"></p>
+                <input type="submit" class="form-button-submit" value="Add"></input>
+                <a href="form.html" class="form-button-cancel">Cancel</a>
+            </div>
+            <script>resetForm();</script>
+        </form>
+    </main>
+    <footer>
+        Adi Bedni
+    </footer>
+</body>
+
+</html>
